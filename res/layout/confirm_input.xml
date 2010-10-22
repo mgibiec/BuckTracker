@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/buttonSpeak" 
+    	android:text="Click and Speak!" />
+    <TableLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+    	<TableRow>
+    		<TextView
+    			android:paddingRight="5dip"
+    			android:text="Category: " />
+    		<EditText
+    			android:id="@+id/category"
+    			android:layout_width="fill_parent" />
+    	</TableRow>	
+    	
+    	<TableRow>
+    		<TextView
+    			android:paddingRight="5dip"
+    			android:text="Name: " />
+    		<EditText
+    			android:id="@+id/name"
+    			android:layout_width="fill_parent" />
+    	</TableRow>	
+    	
+    	<TableRow>
+    		<TextView
+    			android:paddingRight="5dip"
+    			android:text="Price: " />
+    		<EditText
+    			android:id="@+id/price"
+    			android:layout_width="fill_parent"
+    			android:inputType="numberDecimal"/>
+    	</TableRow>	
+    	
+    	<TableRow>
+    		<TextView
+    			android:paddingRight="5dip"
+    			android:text="Date: " />
+    		<EditText
+    			android:id="@+id/date"
+    			android:layout_width="fill_parent" />
+    	</TableRow>	
+   	</TableLayout>
+   	<ListView
+   		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		android:id="@+id/listViewAllExpenses" />
+   	<Button
+   		android:layout_width="fill_parent"
+   		android:layout_height="wrap_content"
+   		android:id="@+id/buttonSave"
+   		android:text="Save this expense"
+   		android:onClick="saveButtonClick" />
+
+</LinearLayout>
