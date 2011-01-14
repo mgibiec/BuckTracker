@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/home_screen_background" >
-    <LinearLayout style="@style/TitleBar">
-    	<LinearLayout
-    		android:layout_width="wrap_content"
-   			android:layout_height="wrap_content"
-   			android:orientation="vertical"
-   			android:layout_weight="1" >
-	    	<TextView
-	    		android:layout_width="wrap_content"
-	    		android:layout_height="wrap_content"
-	    		android:text="@string/app_name"
-	    		android:textColor="@color/black"
-	    		android:textStyle="bold"
-	    		android:textSize="28dip" />
-	   		<TextView
-	    		android:layout_width="wrap_content"
-	    		android:layout_height="wrap_content"
-	    		android:text="@string/slogan"
-	    		android:textStyle="bold"
-	    		android:textColor="@color/orange1" />
-   		</LinearLayout>
-   		<ImageView
-   			android:layout_width="wrap_content"
-    		android:layout_height="wrap_content"
-    		android:src="@drawable/ic_launcher_bucktracker"
-    		android:layout_gravity="right" />
-    </LinearLayout>
+    android:background="@drawable/home_screen_background" >    
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_weight="1" >
     <LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
     	android:orientation="vertical"
-    	android:layout_weight="1">
-   
+    	>
+   		<LinearLayout style="@style/TitleBar">
+	       	<LinearLayout
+	    		android:layout_width="wrap_content"
+	   			android:layout_height="wrap_content"
+	   			android:orientation="vertical"
+	   			android:layout_weight="1" >
+		    	<TextView
+		    		android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:text="@string/app_name"
+		    		android:textColor="@color/black"
+		    		android:textStyle="bold"
+		    		android:textSize="28dip" />
+		   		<TextView
+		    		android:layout_width="wrap_content"
+		    		android:layout_height="wrap_content"
+		    		android:text="@string/slogan"
+		    		android:textStyle="bold"
+		    		android:textColor="@color/orange1" />
+	   		</LinearLayout>
+	   		<ImageView
+	   			android:layout_width="wrap_content"
+	    		android:layout_height="wrap_content"
+	    		android:src="@drawable/ic_launcher_bucktracker"
+	    		android:layout_gravity="right" />
+    	</LinearLayout>
 		<LinearLayout
 			android:layout_width="fill_parent"
 	    	android:layout_height="wrap_content"
-	    	android:orientation="horizontal">
+	    	android:orientation="horizontal"
+	    	android:padding="5dip" >
 	    	<Button 
 	    		style="@style/CustomButton"
 	    		android:text="@string/button_enter_your_receipt"
@@ -49,12 +53,13 @@
 	    		style="@style/CustomButton"
 	    		android:text="@string/button_see_charts"
 	    		android:drawableTop="@drawable/icon"
-	    		android:onClick="showCharts" />	    	
+	    		android:onClick="showCharts" />	  
 	   	</LinearLayout>
 	   	<LinearLayout
 			android:layout_width="fill_parent"
 	    	android:layout_height="wrap_content"
-	    	android:orientation="horizontal">
+	    	android:orientation="horizontal"
+	    	android:padding="5dip">
 	    	<Button 
 	    		style="@style/CustomButton"
 	    		android:text="@string/button_see_all_expenses"
@@ -67,24 +72,21 @@
 	    		android:onClick="manageCategories" />
 	    </LinearLayout>
     </LinearLayout>
+    </ScrollView>
    	<LinearLayout
         android:id="@+id/now_playing_loading"
-        android:layout_width="fill_parent"
-        android:layout_height="100dip"
+        android:layout_width="120dip"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        
         android:gravity="center">
-<!--        <ProgressBar-->
-<!--            style="?android:attr/progressBarStyleSmall"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:paddingRight="6dip"-->
-<!--            android:indeterminate="true"/>-->
-        <TextView
+		<TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            
-            android:text="@string/footer_text" 
-            android:textColor="@color/orange1" />
+            android:layout_height="wrap_content" 
+                       
+            android:text="@string/footer_text"
+            android:gravity="center_horizontal"       
+            android:textColor="@color/orange1"
+            android:layout_marginBottom="10dip" />
          <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"    
@@ -92,5 +94,4 @@
             android:text="@string/footer_text_2" 
             android:textColor="@color/orange1" />
     </LinearLayout>
-
 </LinearLayout>

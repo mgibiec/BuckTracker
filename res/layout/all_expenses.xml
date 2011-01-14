@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:background="@drawable/home_screen_background">
+  <LinearLayout style="@style/TitleBar">
+  	<Button style="@style/CustomButtonSmall"
+  		android:text="@string/filter_set"
+  		android:onClick="setExpensesFilters"
+  		android:layout_marginRight="3dip" 
+  		android:layout_weight="1" />
+	<Button 
+		style="@style/CustomButtonSmall" 
+  		android:text="@string/filter_clear"
+  		android:onClick="clearExpensesFilters"
+  		android:layout_marginLeft="3dip"
+  		android:layout_weight="1" />
+<!--	<TextView android:id="@+id/labelSelectedCategories"-->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:layout_weight="1"-->
+<!--		android:text="All expenses" />-->
+<!--	<TextView android:id="@+id/labelSelectedTimespan"-->
+<!--		android:layout_width="fill_parent"-->
+<!--		android:layout_height="wrap_content"-->
+<!--		android:layout_weight="1"-->
+<!--		android:text="All expenses" />-->
+  </LinearLayout>
+  <ListView
+  	android:layout_width="wrap_content"
+  	android:layout_height="wrap_content"
+  	android:cacheColorHint="#00000000"
+  	android:id="@+id/lvAllExpenses"  />
+  
+</LinearLayout>

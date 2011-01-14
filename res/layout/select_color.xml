@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<LinearLayout
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/blue1"
+				android:textColor="@color/blue1"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/blue2"
+				android:textColor="@color/blue2"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/blue3"
+				android:textColor="@color/blue3" 
+				android:onClick="getColor"/>
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/orange1"
+				android:textColor="@color/orange1" 
+				android:onClick="getColor"/>
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/orange2"
+				android:textColor="@color/orange2" 
+				android:onClick="getColor"/>
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/orange3"
+				android:textColor="@color/orange3" 
+				android:onClick="getColor"/>
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/red"
+				android:textColor="@color/red"
+				android:onClick="getColor" />	
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/green1"
+				android:textColor="@color/green1"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/green2"
+				android:textColor="@color/green2"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/green3"
+				android:textColor="@color/green3"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/gray1"
+				android:textColor="@color/gray1"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/gray2"
+				android:textColor="@color/gray2"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/gray3"
+				android:textColor="@color/gray3"
+				android:onClick="getColor" />
+			<Button android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:background="@color/black"
+				android:textColor="@color/black"
+				android:onClick="getColor" />
+			<Button android:id="@+id/buttonCustomColor" 
+				android:layout_width="fill_parent"
+				android:layout_height="?android:attr/listPreferredItemHeight"
+				android:text="Custom color"
+				android:onClick="getCustomColor" />
+				
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

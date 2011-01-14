@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"	
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/home_screen_background" >
+	<TabHost 
+		android:id="@android:id/tabhost" 
+		android:layout_width="fill_parent"	
+		android:layout_height="fill_parent"
+		android:layout_weight="1" >
+		<LinearLayout 
+			android:orientation="vertical" 
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent">
+			<TabWidget 
+			android:id="@android:id/tabs"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" />
+				<FrameLayout 
+				android:id="@android:id/tabcontent" 
+				android:layout_width="fill_parent" 
+				android:layout_height="fill_parent">
+				<ScrollView 
+					android:id="@+id/tab1_contents"	
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content">
+					<RelativeLayout 
+						xmlns:android="http://schemas.android.com/apk/res/android" 
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent">
+						<RadioGroup android:id="@+id/radioGroup"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:orientation="vertical" />
+				
+					</RelativeLayout>
+				</ScrollView>
+				<ScrollView 
+					android:id="@+id/tab2_contents"	
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content">
+					<LinearLayout 
+						xmlns:android="http://schemas.android.com/apk/res/android" 
+						android:layout_width="fill_parent" 
+						android:layout_height="fill_parent"
+						android:orientation="vertical">
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:text="From: "
+							android:textColor="@color/white" />
+						<DatePicker android:id="@+id/datePickerFrom"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content" />
+						<TextView
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:text="To: " 
+							android:textColor="@color/white"/>
+						<DatePicker android:id="@+id/datePickerTo"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content" />								
+						</LinearLayout>
+				</ScrollView>
+				
+			</FrameLayout>
+		</LinearLayout>
+	</TabHost>
+	<Button android:id="@+id/btnSelectFilters"
+		style="@style/CustomButton"		
+		android:text="SET FILTERS" />
+</LinearLayout>

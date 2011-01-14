@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  	<TextView
+  		android:text="Category Name:"  
+  		android:layout_width="wrap_content" 
+  		android:layout_height="wrap_content" />
+	
+	<EditText 
+		android:id="@+id/categoryEditAddName" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" />
+
+	<TextView
+  		android:text="Color:" 
+  		android:layout_width="wrap_content" 
+  		android:layout_height="wrap_content" />
+  	<Button
+  		android:id="@+id/categoryColorPicker"
+  		android:layout_width="fill_parent" 
+		android:layout_height="?android:attr/listPreferredItemHeight"
+		android:onClick="pickColor" 
+		android:layout_margin="2dip" />
+	<Button 
+		android:id="@+id/Button01" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:text="Save Category"
+		android:onClick="saveCategory"
+		android:layout_marginTop="2dip" />
+</LinearLayout>

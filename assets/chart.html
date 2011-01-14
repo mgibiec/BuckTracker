@@ -1,0 +1,44 @@
+<html>
+<head>
+<script type="text/javascript" src="jscharts.js"></script>
+</head>
+
+<body>
+	<div id="chartcontainer">Chart is loading...</div>
+<!--	<div id="chartcontainer2">Chart is loading...</div>-->
+	
+<script type="text/javascript">
+	var originalData = dataProvider.getStringData();
+<!--	alert(originalData); -->
+	var myDataArray = originalData.split(";");
+	var finalData= [];
+	var colorsData= [];
+	            	
+	var i=0;
+	for(i= 0; i < myDataArray.length;i++){
+		var temp = myDataArray[i].split("_");	
+		var tempArray = [temp[0], parseFloat(temp[1])];
+		finalData.push(tempArray);
+		colorsData.push(temp[2]);
+	}
+	var myChart = new JSChart('chartcontainer', 'bar');
+	myChart.setDataArray(finalData);
+	myChart.setAxisNameX(dataProvider.getAxisXLabel());
+	myChart.setAxisNameY(dataProvider.getAxisYLabel());
+	myChart.setAxisPaddingLeft(30);
+	myChart.setAxisValuesPrefixY('$');
+	myChart.setSize(dataProvider.getChartWidth(), dataProvider.getChartHeight());
+	myChart.setTitle(dataProvider.getChartTitle());
+	myChart.colorizeBars(colorsData);
+	
+	myChart.draw();
+<!--	var myChart2 = new JSChart('chartcontainer2', 'pie');-->
+<!--	myChart2.setDataArray(finalData);-->
+<!--	myChart2.setSize(dataProvider.getChartWidth(), dataProvider.getChartHeight());-->
+<!--	myChart2.draw();-->
+
+	dataProvider.indicateLoadingEnded();
+
+</script>
+</body>
+</html>

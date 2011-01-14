@@ -1,31 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="wrap_content"
-  android:layout_height="wrap_content"
-  android:orientation="horizontal">
-	<TextView
-		android:layout_width="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="?android:attr/listPreferredItemHeight"
+	android:padding="2dip">
+
+	<TextView android:id="@+id/priceInRow" 
+		android:layout_width="80dip"
 		android:layout_height="fill_parent"
-		android:id="@+id/priceInRow"
+		android:layout_alignParentTop = "true"
+		android:layout_alignParentBottom = "true"
+		android:textColor="@color/price"
+		android:textSize="20dip"
+		android:textStyle="bold" 
+		android:gravity="center"	
+		android:text="00.00"
+		android:inputType="text"
+		android:ellipsize="end"
+		android:layout_marginRight="5dip"
+		/>
 		
-	/>
-	<LinearLayout  
-	  android:layout_width="wrap_content"
-	  android:layout_height="wrap_content"
-	  android:orientation="vertical">
-	  <TextView 
-	  	android:layout_width="fill_parent"
-	  	android:layout_height="wrap_content"
-	  	android:id="@+id/categoryInRow"	
-	  	android:layout_weight="1"
-	  	android:singleLine="true"
-	  	android:ellipsize="end"
-	  />
-	  <TextView 
-	  	android:layout_width="fill_parent"
-	  	android:layout_height="wrap_content"
-	  	android:id="@+id/nameInRow"
-	  	android:layout_weight="1"	
-	  />
-	</LinearLayout>
-</LinearLayout>
+	<TextView android:id="@+id/nameInRow" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_toRightOf="@id/priceInRow"
+		android:layout_alignParentRight="true" 
+		android:layout_alignParentTop="true"		
+		android:layout_alignWithParentIfMissing="true"
+		android:textSize="18dip"
+		android:textColor="@color/expenseName" 
+		android:gravity="center_vertical"
+		android:paddingLeft = "2dip" 
+		android:text="Place name"	
+		android:ellipsize="marquee" 
+		android:lines="1" 
+		android:paddingRight="8dip"/>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true" 
+		android:layout_toRightOf="@id/priceInRow" 
+		android:paddingLeft = "2dip" >
+		<TextView android:id="@+id/dateInRow" 
+			android:layout_width="fill_parent"
+			android:layout_height="26dip" 
+			android:layout_weight="3" 
+			android:ellipsize="marquee" 					
+			android:textColor="@color/expenseName"			
+			android:singleLine="true"
+			android:text="Jan 1, 2010"
+			/>
+		<TextView android:id="@+id/categoryInRow" 
+			android:layout_width="fill_parent"
+			android:layout_height="26dip" 	
+			android:layout_weight="4" 
+			android:ellipsize="marquee" 		
+			android:paddingRight="5dip"
+			android:gravity="right"
+			android:textColor="@color/expenseName"
+			android:text="Category"
+			android:textStyle="bold" />
+	</LinearLayout>	
+		
+	
+</RelativeLayout>

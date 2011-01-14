@@ -2,61 +2,117 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <Button
+    android:layout_height="fill_parent"
+    android:background="@drawable/home_screen_background" >
+    <Button android:id="@+id/buttonSpeak"
+    	style="@style/CustomButtonSmall"    	
+    	android:text="Voice input"    	
+    	android:drawableRight="@android:drawable/ic_btn_speak_now"
+    	/>
+    <TextView
+    	style="@style/label"  		
+ 		android:text="Category: " />
+    <LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:id="@+id/buttonSpeak" 
-    	android:text="Click and Speak!" />
-    <TableLayout
-    	android:layout_width="fill_parent"
-    	android:layout_height="wrap_content">
-    	<TableRow>
-    		<TextView
-    			android:paddingRight="5dip"
-    			android:text="Category: " />
-    		<EditText
-    			android:id="@+id/category"
-    			android:layout_width="fill_parent" />
-    	</TableRow>	
-    	
-    	<TableRow>
-    		<TextView
-    			android:paddingRight="5dip"
-    			android:text="Name: " />
-    		<EditText
-    			android:id="@+id/name"
-    			android:layout_width="fill_parent" />
-    	</TableRow>	
-    	
-    	<TableRow>
-    		<TextView
-    			android:paddingRight="5dip"
-    			android:text="Price: " />
-    		<EditText
-    			android:id="@+id/price"
+    	android:orientation="horizontal">
+			<Spinner			
+    			android:layout_weight="1"
     			android:layout_width="fill_parent"
-    			android:inputType="numberDecimal"/>
-    	</TableRow>	
-    	
-    	<TableRow>
-    		<TextView
-    			android:paddingRight="5dip"
-    			android:text="Date: " />
-    		<EditText
-    			android:id="@+id/date"
-    			android:layout_width="fill_parent" />
-    	</TableRow>	
-   	</TableLayout>
-   	<ListView
+    			android:layout_height="wrap_content"
+    			android:id="@+id/category"
+    			android:prompt="@string/category_prompt" />	
+   			<ImageButton
+   				android:layout_width="wrap_content"
+   				android:layout_height="wrap_content"
+   				android:id="@+id/buttonCategorySpeak"
+   				android:src="@android:drawable/ic_btn_speak_now"
+   				android:scaleType="fitCenter"
+   				/>
+   	</LinearLayout>
+	<TextView
+		style="@style/label"
+		android:text="Name: " />
+   	<LinearLayout	
    		android:layout_width="fill_parent"
    		android:layout_height="wrap_content"
-   		android:id="@+id/listViewAllExpenses" />
-   	<Button
-   		android:layout_width="fill_parent"
-   		android:layout_height="wrap_content"
-   		android:id="@+id/buttonSave"
-   		android:text="Save this expense"
-   		android:onClick="saveButtonClick" />
-
+    	android:orientation="horizontal">
+   		<EditText
+   			android:layout_weight="1"
+   			android:layout_width="fill_parent"
+   			android:layout_height="wrap_content"
+   			android:id="@+id/name"/>
+		<ImageButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/buttonNameSpeak"
+			android:src="@android:drawable/ic_btn_speak_now"
+			android:scaleType="fitCenter" />
+   	</LinearLayout>	  	
+ 	<TextView
+		style="@style/label"
+   		android:text="Price: " />
+   	<LinearLayout
+	   	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+   		<EditText
+			android:layout_weight="1"
+   			android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:id="@+id/price"
+    		android:inputType="number|phone"
+    		/>
+   		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/buttonPriceX10"
+			android:text="*10"
+			android:onClick="times10" />
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/buttonPirceDiv10"
+			android:text="/10"
+			android:onClick="div10"/>
+  		<ImageButton
+   			android:layout_width="wrap_content"
+   			android:layout_height="wrap_content"
+   			android:id="@+id/buttonPriceSpeak"
+   			android:src="@android:drawable/ic_btn_speak_now"
+   			android:scaleType="fitCenter" />
+   	</LinearLayout>
+    <LinearLayout
+	   	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+		<TextView
+			style="@style/label"
+  			android:layout_weight="1"   			
+   			android:text="Today's date"
+   			android:textSize="18sp"
+   			android:id="@+id/date" />
+   		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/buttonEditDate"			
+			android:text="Change Date" />
+	</LinearLayout>
+   	<LinearLayout
+	   	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+	   	<Button android:id="@+id/buttonSave"
+	   		style="@style/CustomButtonSmall"
+	   		android:layout_weight="1"
+	   		android:text="Save and done"
+	   		android:textColor="@color/white"
+	   		android:onClick="saveButtonClick" />
+   		<Button android:id="@+id/buttonSaveAndNew"
+	   		style="@style/CustomButtonSmall"
+	   		android:layout_weight="1"
+	   		android:text="Save and new"
+	   		android:textColor="@color/white"
+	   		android:onClick="saveButton2Click" />
+	</LinearLayout>
 </LinearLayout>
